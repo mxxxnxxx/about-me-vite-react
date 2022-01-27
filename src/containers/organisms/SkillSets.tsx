@@ -1,24 +1,20 @@
 import React, { useEffect } from 'react'
-import ReactDOM from "react-dom"
-import Creator from '../components/Creator'
-import typescriptLogo from '/app/src/logos/typescriptLogo.png'
+import SkillStets from '../../components/organisms/SkillSets'
+import awsLogo from '/app/src/logos/awsLogo.png'
 import DockerComposeLogo from '/app/src/logos/Docker-ComposeLogo.png'
 import dockerLogo from '/app/src/logos/dockerLogo.png'
-import awsLogo from '/app/src/logos/awsLogo.png'
+import EC2Logo from '/app/src/logos/EC2Logo.png'
+import gitHubLogo from '/app/src/logos/GitHubLogo.png'
+import gitLogo from '/app/src/logos/GitLogo.png'
+import javascriptLogo from '/app/src/logos/javascriptLogo.png'
 import laravelLogo from '/app/src/logos/laravelLogo.png'
 import phpLogo from '/app/src/logos/phpLogo.png'
 import ReactLogo from '/app/src/logos/ReactLogo.png'
-import javascriptLogo from '/app/src/logos/javascriptLogo.png'
-import gitLogo from '/app/src/logos/GitLogo.png'
-import gitHubLogo from '/app/src/logos/GitHubLogo.png'
-import nodeJsLogo from '/app/src/logos/nodeJsLogo.png'
-import LibraryLogo from '/app/src/logos/LibraryLogo.png'
-import EC2Logo from '/app/src/logos/EC2Logo.png'
 import S3Logo from '/app/src/logos/S3Logo.png'
-import cloud9Logo from '/app/src/logos/cloud9Logo.png'
+import typescriptLogo from '/app/src/logos/typescriptLogo.png'
 import vpcLogo from '/app/src/logos/vpcLogo.png'
 
-const EnhancedCreator: React.FC = () => {
+const EnhancedSkillSets: React.FC = () => {
     // js関係
     const react = {
         name: 'React',
@@ -118,14 +114,10 @@ const EnhancedCreator: React.FC = () => {
         git
     ]
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
-
     return (
-        <Creator
+        <SkillStets
             skillSet={skillSet}
         />
     )
 }
-export default EnhancedCreator
+export default EnhancedSkillSets

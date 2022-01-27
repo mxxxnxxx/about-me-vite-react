@@ -1,63 +1,114 @@
 import { makeStyles } from '@material-ui/core/styles'
 import Metal from '/app/src/background_image/metal.jpg'
-import Stone from '/app/src/background_image/stone.jpg'
+import Film from '/app/src/background_image/film.jpg'
+import Sand from '/app/src/background_image/sand-2.jpg'
+
 const useStyle = makeStyles((theme) => ({
     root: {
-        flexGrow: 1
+        flexGrow: 1,
+        minWidth: '392px'
     },
     item1: {
         height: '200px',
-        backgroundColor: 'rgb(213, 182, 149)',
+        backgroundColor: 'rgb(247, 228, 210)',
         display: 'flex',
         justifyContent: 'center',
         flexDirection: 'column',
         alignItems: 'center',
     },
-    title: {
+    titleName: {
+        fontSize: '22px',
         padding: '0px',
         color: "rgb(100, 100, 100)"
     },
+    titleSub: {
+        fontSize: '14px',
+        padding: '0px',
+        color: "rgb(100, 100, 100)"
+    },
+    name: {
+        fontSize: '10px'
+    },
     item2: {
         height: '200px',
-        backgroundImage: `url(${Stone})`,
+        backgroundImage: `url(${Metal})`,
         backgroundSize: 'cover'
     },
     item3: {
-        backgroundColor: 'rgb(247, 228, 210)',
-        padding: '10px'
+        backgroundColor: 'rgb(237, 206, 139)',
+        padding: '0px',
+        margin: '0px',
+        display: 'flex',
+        flexDirection: 'row-reverse',
+        alignItems: 'right'
+    },
+    'item3-2': {
+        backgroundColor: 'rgb(237, 206, 139)',
     },
     ProfilePhoto: {
-        maxWidth: '1200px',
+        maxWidth: '400px',
+        minWidth: '550',
         width: '100%',
-
     },
-    Profile: {
+    item4: {
+        backgroundColor: 'rgb(216, 216, 216)',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         padding: '0px'
     },
-    ProfileData: {
+    ProfileDataSub: {
+        fontSize: '10px',
         color: "rgb(100, 100, 100)",
-        padding: '3px'
     },
-    selfIntroduction: {
+    ProfileData: {
+        fontSize: '14px',
+        lineHeight: '2',
+        color: "rgb(100, 100, 100)",
+        paddingBottom: theme.spacing(1)
+    },
+    'item4-2': {
+
+        backgroundImage: `url(${Sand})`,
+        backgroundSize: 'cover'
+    },
+    item5: {
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'rgb(216, 216, 216)'
     },
+
     selfIntroductionTitle: {
-        color: "rgb(100, 100, 100)"
+        color: "rgb(100, 100, 100)",
+        paddingTop: theme.spacing(5),
+        paddingBottom: theme.spacing(5)
+    },
+    selfIntroductionSubTitle: {
+        color: "rgb(100, 100, 100)",
+        paddingTop: theme.spacing(5),
+        paddingBottom: theme.spacing(5),
+    },
+    arrowDownward: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        margin: theme.spacing(6)
+    },
+    selfIntroduction: {
+        paddingTop: theme.spacing(2),
+        paddingRight: theme.spacing(5),
+        paddingLeft: theme.spacing(5),
+        paddingBottom: theme.spacing(5),
+    },
+    aboutMe: {
+        width: '60%'
     },
     skills: {
         backgroundColor: 'rgb(247, 228, 210)',
     },
 
     skillSets: {
-        padding: theme.spacing(3),
         margin: theme.spacing(5)
     },
     skillSetsTitle: {
@@ -76,7 +127,6 @@ const useStyle = makeStyles((theme) => ({
     skillFrame: {
         boxShadow: 'none',
         marginBottom: theme.spacing(3),
-
     },
     skill: {
         marginBottom: theme.spacing(2),
@@ -101,8 +151,14 @@ const useStyle = makeStyles((theme) => ({
     },
     skillLibraryName: {
         fontSize: '12px',
-        color: 'Gray',
-        paddingLeft: '16px'
+        paddingLeft: theme.spacing(1),
+        paddingRight: theme.spacing(1),
+    },
+    skillDetailMenu: {
+        backgroundColor: 'rgb(247, 228, 210)',
+    },
+    skillDetail: {
+        backgroundColor: "white"
     },
     willMore: {
         boxShadow: 'none'
@@ -111,7 +167,25 @@ const useStyle = makeStyles((theme) => ({
         width: '100%'
     },
     item7: {
-        backgroundColor: 'rgb(237, 206, 139)'
+        backgroundColor: 'rgb(237, 206, 139)',
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
+    deliverables: {
+        padding: theme.spacing(5)
+    },
+    deliverablesTitle: {
+        color: "rgb(100, 100, 100)",
+        paddingBottom: theme.spacing(2),
+    },
+    deliverablesCard: {
+        maxWidth: '345px',
+        margin: theme.spacing(3)
+    },
+    deliverablesCardMedia: {
+        margin: theme.spacing(3)
     },
     item8: {
         height: '200px',
@@ -121,11 +195,12 @@ const useStyle = makeStyles((theme) => ({
         alignItems: 'center',
     },
     sns: {
-        color: "rgb(100, 100, 100)"
+        color: "rgb(100, 100, 100)",
+        margin: theme.spacing(1)
     },
     item9: {
         height: '200px',
-        backgroundImage: `url(${Metal})`,
+        backgroundImage: `url(${Film})`,
         backgroundSize: 'cover'
     },
 }))

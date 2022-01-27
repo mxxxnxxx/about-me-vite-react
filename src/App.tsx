@@ -1,9 +1,9 @@
 import React from 'react'
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core'
-import EnhancedCreator from './containers/Creator'
+import { createTheme, MuiThemeProvider } from '@material-ui/core'
 import GlobalStyle from './Styles/grobalStyles'
+import Creator from './components/page/Creator'
 
-const theme = createMuiTheme({
+const theme = createTheme({
   typography: {
     "fontFamily": "\"Zen Kaku Gothic New\", \"sans-serif\"",
     button: {
@@ -16,7 +16,7 @@ const App: React.FC = () => {
   return (
     <MuiThemeProvider theme={theme}>
       <GlobalStyle />
-      <EnhancedCreator />
+      <Creator />
     </MuiThemeProvider>
   )
 }
