@@ -3,7 +3,7 @@ import Menu from '@material-ui/core/Menu'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import React from 'react'
 import useStyle from '../../Styles/useStyle'
-import willMore from '/app/src/background_image/willMore.jpg'
+import willMore from '../../background_image/willMore.jpg'
 
 type Props = {
     id: string

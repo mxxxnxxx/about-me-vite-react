@@ -1,8 +1,80 @@
-import { Box, Grid, Typography } from "@material-ui/core"
-import Portrait from '/app/src/background_image/Portrait.jpg'
-import useStyle from '../../Styles/useStyle'
-import ArrowDownwardRoundedIcon from '@material-ui/icons/ArrowDownwardRounded'
+import { Grid, makeStyles, Typography } from "@material-ui/core"
+import Portrait from '../../background_image/Portrait.jpg'
+import Metal from '../../background_image/metal.jpg'
+import Sand from '../../background_image/sand-2.jpg'
 
+const useStyle = makeStyles((theme) => ({
+    item1: {
+        height: '200px',
+        backgroundColor: 'rgb(247, 228, 210)',
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
+    titleName: {
+        fontSize: '22px',
+        padding: '0px',
+        color: "rgb(100, 100, 100)"
+    },
+    titleSub: {
+        fontSize: '14px',
+        padding: '0px',
+        color: "rgb(100, 100, 100)"
+    },
+    name: {
+        fontSize: '10px'
+    },
+
+    item2: {
+        height: '200px',
+        backgroundImage: `url(${Metal})`,
+        backgroundSize: 'cover'
+    },
+    item3: {
+        background: "linear-gradient(to bottom, #f7e4d2 0%, #f7e4d2 50%, #d8d8d8 50%, #d8d8d8 100%)",
+        padding: '0px',
+        margin: '0px',
+        display: 'flex',
+        flexDirection: 'row-reverse',
+    },
+    'item3-2': {
+        backgroundColor: 'rgb(237, 206, 139)',
+    },
+    ProfilePhoto: {
+        maxWidth: '400px',
+        minWidth: '550',
+        width: '100%',
+    },
+    item4: {
+        backgroundColor: 'rgb(216, 216, 216)',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '0px'
+    },
+    Profile: {
+        padding: theme.spacing(8),
+        fontSize: '14px',
+        lineHeight: '2',
+        color: "rgb(100, 100, 100)",
+    },
+    ProfileDataSub: {
+        paddingBottom: theme.spacing(1),
+        fontSize: '13px',
+        color: "rgb(100, 100, 100)",
+    },
+    ProfileData: {
+        paddingBottom: theme.spacing(4),
+        lineHeight: '33px'
+    },
+    'item4-2': {
+        backgroundImage: `url(${Sand})`,
+        backgroundSize: 'cover'
+    },
+
+}))
 export default function MyData() {
     const classes = useStyle()
     return (
@@ -15,7 +87,7 @@ export default function MyData() {
                     Muneyuki Tachibana
                 </Typography>
                 <Typography className={classes.titleSub} >
-                    -WEB DEVELOPER-
+                    - About Me -
                 </Typography>
             </Grid>
 
@@ -29,9 +101,6 @@ export default function MyData() {
             <Grid
                 item xs={7}
                 className={classes.item3}
-                style={{
-                    padding: '0px'
-                }}
             >
                 <img src={Portrait} className={classes.ProfilePhoto} />
             </Grid>
@@ -45,10 +114,7 @@ export default function MyData() {
                 item xs={7}
                 className={classes.item4}
             >
-                <div className={classes.ProfileData}>
-                    <Typography align='center' className={classes.ProfileData}>
-                        -PROFILE-
-                    </Typography>
+                <div className={classes.Profile}>
                     <Typography className={classes.ProfileDataSub}>
                         -name-
                     </Typography>
@@ -68,77 +134,16 @@ export default function MyData() {
                     </Typography>
                     <Typography className={classes.ProfileData}>
                         写真, プログラミング,<br></br>
-                        art, 音楽, 洋服, 舞踏鑑賞<br></br>
+                        art, 音楽, 洋服<br></br>
                         海外旅行, 映画鑑賞, アニメ,<br></br>
                         心理学,哲学
                     </Typography>
                 </div>
             </Grid>
             <Grid
-                xs={5}
+                item xs={5}
                 className={classes["item4-2"]}
             >
-
-            </Grid>
-
-
-            {/* 自己紹介 */}
-            <Grid
-                item xs={12}
-                className={classes.item5}
-            >
-                <Box className={classes.aboutMe}>
-                    <Typography align="center" variant="h5" className={classes.selfIntroductionTitle}>
-                        -About Me-
-                    </Typography>
-                    <Typography className={classes.selfIntroductionSubTitle} align="center" variant="h6">
-                        webとの出会いは?
-                    </Typography>
-                    <Box className={classes.arrowDownward}>
-                        <ArrowDownwardRoundedIcon />
-                    </Box>
-                    <Typography className={classes.selfIntroduction}>
-                        <br></br>
-                        学生時代に課外活動とし街に繰り出してStreetSnapを撮影していました｡<br></br>
-                        <br></br>
-                        撮影は今でも続けていて､発表の場を考える中で必然的にwebに巡りあいました｡
-                    </Typography>
-
-                    <Typography align="center" variant="h6" className={classes.selfIntroductionSubTitle} >
-                        経歴は?
-                    </Typography>
-                    <Box className={classes.arrowDownward}>
-                        <ArrowDownwardRoundedIcon />
-                    </Box>
-                    <Typography align="left" className={classes.selfIntroduction}>
-                        大きな流れとしては､<br></br>
-                        <br></br>
-                        作業療法士  →  アパレル販売  →  写真活動<br></br>
-                        <br></br>
-                        作業療法士では心理学や哲学への関心を得ました｡<br></br>
-                        <br></br>
-                        アパレルではデザインと身体性との関係性について学んだと感じています｡<br></br>
-                        <br></br>
-                        写真活動では作業療法士とアパレルで学んだことを実践し統合する経験を得ました｡
-                    </Typography>
-
-                    <Typography align="center" variant="h6" className={classes.selfIntroductionSubTitle} >
-                        どんなエンジニアを目指しているか?
-                    </Typography>
-                    <Box className={classes.arrowDownward}>
-                        <ArrowDownwardRoundedIcon />
-                    </Box>
-                    <Typography className={classes.selfIntroduction}>
-                        <br></br>
-
-                        <br></br>
-                        これまで経験してきた作業療法士､アパレル､写真活動から心理学やデザイン(backend領域も含めて)の重要さを学びました｡<br></br>
-                        <br></br>
-                        誰がいつどのように誰と使うかを常に意識し､<br></br>
-                        "人間的なものが際立つテック"を創造できるエンジニアになりたいと思っています｡
-                        <br></br>
-                    </Typography>
-                </Box>
             </Grid>
         </>
     )

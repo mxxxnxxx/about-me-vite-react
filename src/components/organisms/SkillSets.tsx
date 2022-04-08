@@ -5,7 +5,7 @@ import Masonry from 'react-masonry-css'
 import EnhancedSkillDetail from '../../containers/atoms/SkillDetail'
 import EnhancedSkillDetailWillMore from '../../containers/atoms/SkillDetailWillMore'
 import useStyle from '../../Styles/useStyle'
-import willMoreLogo from '/app/src/logos/willMoreLogo.png'
+import willMoreLogo from '../../logos/willMoreLogo.png'
 
 type Props = {
     skillSet: {
