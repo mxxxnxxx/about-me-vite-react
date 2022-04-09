@@ -38,7 +38,7 @@ export default function Deliverables() {
                         <IconButton
                             // PressPlaces リンク
                             target="_blank"
-                            href=''
+                            href='https://press-place.net'
                         >
                             <Box className={classes.deliverablesCardMedia}>
                                 <CardMedia
