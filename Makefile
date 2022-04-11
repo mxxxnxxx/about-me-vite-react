@@ -3,11 +3,11 @@ up:
 build:
 	docker-compose build --no-cache --force-rm
 init:
-	docker-compose up -d --build
-	# docker-compose -f docker-compose.yml -f docker-compose.dev.yml build
-	# docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+	docker-compose -f docker-compose.dev.yml build --no-cache --force-rm
+	docker-compose -f docker-compose.dev.yml up -d
 init-prod:
-	docker-compose up -d --build
+	docker-compose -f docker-compose.prod.yml build --no-cache --force-rm
+	docker-compose -f docker-compose.prod.yml up -d
 remake:
 	@make destroy
 	@make init
