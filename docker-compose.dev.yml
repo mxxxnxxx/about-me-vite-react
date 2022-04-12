@@ -1,7 +1,6 @@
 version: '3'
 services:
   app:
-    container_name: react-app-container
     image: node:16-alpine
     volumes:
       - .:/var/local/app:cached
@@ -9,7 +8,6 @@ services:
     command: sh -c "npm install && npm run dev"
   web:
     image: nginx:1.18-alpine
-    container_name: ngeinx-container
     volumes:
       - ./config/nginx/dev.conf:/etc/nginx/nginx.conf:cached
       - ./logs/nginx:/var/log/nginx:cached
