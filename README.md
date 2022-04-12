@@ -8,7 +8,7 @@
 - docker､レスポンシブデザイン､TypeScript 対応済み
 
   - Link
-    - [mT about me](35.74.155.2)
+    - [mT about me](http://35.74.155.2/)
 
 ---
 
